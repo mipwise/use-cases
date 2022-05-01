@@ -2,7 +2,10 @@
 This directory contains implementation of optimization 
 models that solve the use case.
 
-The append to the name of each file indicates the optimization solver
+- [freshly_pulp.py](freshly_pulp.py)
+- [freshly_grb.py](freshly_grb.py)
+
+The appending to the name of each file indicates the optimization solver
 used for the implementation of the mathematical formulation
 provided in the [docs](../docs/README.md) directory.
 
