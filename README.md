@@ -1,6 +1,6 @@
 # Mip Wise Use Cases
 This repository contains solutions to the collection
-of use cases maintained by Mip Wise.
+of use cases maintained by [Mip Wise](https://www.mipwise.com/).
 
 Go to [mipwise.com/use-cases](https://www.mipwise.com/use-cases) 
 to see the statements of all use cases.
