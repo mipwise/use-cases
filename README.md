@@ -12,6 +12,8 @@ use case.
 - [Freshly](freshly/README.md)
 - [PinkPig](pinkpig/README.md)
 - [Black Blend](black_blend/README.md)
+- [Pastesian](pastesian/README.md)
+- [Woodler](woodler/README.md)
 
 
 If you decide to use these resources, with students for example,
