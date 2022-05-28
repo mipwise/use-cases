@@ -13,6 +13,7 @@ use case.
 - [PinkPig](pinkpig/README.md)
 - [Black Blend](black_blend/README.md)
 - [Pastesian](pastesian/README.md)
+- [SoyKing](soyking/README.md)
 - [Woodler](woodler/README.md)
 
 
