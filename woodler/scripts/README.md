@@ -2,7 +2,7 @@
 This directory contains implementation of optimization 
 models that solve the use case.
 
-- [woodler_pulp.py](woodler_pulp.py)
+- [woodler_single_truck_pulp.py](woodler_single_truck_pulp.py)
 
 The appending to the name of each file indicates the optimization solver
 used for the implementation of the mathematical formulation

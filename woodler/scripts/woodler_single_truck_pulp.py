@@ -24,7 +24,7 @@ x_keys = [(i, j) for i in I for j in I if i != j]
 mdl = pulp.LpProblem('woodler', sense=pulp.LpMinimize)
 
 # Add variables
-x = pulp.LpVariable.dicts(indexs=x_keys, cat=pulp.LpBinary, name='x')
+x = pulp.LpVariable.dicts(indices=x_keys, cat=pulp.LpBinary, name='x')
 
 # Add Constraints
 # Flow balance
@@ -37,7 +37,7 @@ for j in I:
 
 # Miller–Tucker–Zemlin (MTZ) sub-tour elimination constraints
 if sub_tour_elimination_MTZ:
-    u = pulp.LpVariable.dicts(indexs=I, cat=pulp.LpInteger, lowBound=0, upBound=len(I)-1, name='u')
+    u = pulp.LpVariable.dicts(indices=I, cat=pulp.LpInteger, lowBound=0, upBound=len(I)-1, name='u')
     for i, j in x_keys:
         if j != depot_id:
             mdl.addConstraint(u[i] - u[j] + 1 <= len(I) * (1 - x[i, j]), name=f'mtz_{i}_{j}')
