@@ -13,7 +13,7 @@ from docplex.mp.model import Model
 mc = {1: 'Print', 2: 'TV', 3: 'SEO', 4: 'Social Media'}
 I = list(mc)
 # expected ROI
-r = {1: 0.16, 2: 0.09, 3: 0.06, 4: 0.14}
+r = {1: 1.16, 2: 1.09, 3: 1.06, 4: 1.14}
 # expected market penetration
 p = {1: 2.1, 2: 2.5, 3: 3.0, 4: 0.9}
 # total budget
