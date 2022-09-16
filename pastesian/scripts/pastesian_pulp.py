@@ -4,8 +4,8 @@ import pulp
 mdl = pulp.LpProblem('Pastesian', sense=pulp.LpMinimize)
 
 # Add variables
-x = pulp.LpVariable.dicts(indexs=[1, 2, 3, 4], cat=pulp.LpContinuous, lowBound=0, name='x')
-s = pulp.LpVariable.dicts(indexs=[1, 2, 3], cat=pulp.LpContinuous, lowBound=0, name='s')
+x = pulp.LpVariable.dicts(indices=[1, 2, 3, 4], cat=pulp.LpContinuous, lowBound=0, name='x')
+s = pulp.LpVariable.dicts(indices=[1, 2, 3], cat=pulp.LpContinuous, lowBound=0, name='s')
 
 # Add Constraints
 mdl.addConstraint(50 + x[1] == 200 + s[1], name='c1')

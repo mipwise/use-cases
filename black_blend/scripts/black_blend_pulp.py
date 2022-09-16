@@ -7,7 +7,7 @@ x_keys = [(1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)]
 mdl = pulp.LpProblem("BlackBland", sense=pulp.LpMaximize)
 
 # Add decision variables
-x = pulp.LpVariable.dicts(indexs=x_keys, cat=pulp.LpContinuous, lowBound=0.0, name='x')
+x = pulp.LpVariable.dicts(indices=x_keys, cat=pulp.LpContinuous, lowBound=0.0, name='x')
 
 # Add constraints
 # capacity of Supplier 1:

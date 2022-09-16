@@ -4,7 +4,7 @@ import pulp
 mdl = pulp.LpProblem('PinkPig', sense=pulp.LpMinimize)
 
 # Add variables
-x = pulp.LpVariable.dicts(indexs=[1, 2], cat=pulp.LpContinuous, lowBound=0, name='x')
+x = pulp.LpVariable.dicts(indices=[1, 2], cat=pulp.LpContinuous, lowBound=0, name='x')
 
 # Add Constraints
 mdl.addConstraint(0.77*x[1] + 0.66*x[2] >= 6.0, name='c1')

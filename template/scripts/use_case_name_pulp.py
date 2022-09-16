@@ -17,8 +17,8 @@ M = max(sum(d[i, t] for i in I) for t in T)
 mdl = pulp.LpProblem('UseCaseName', sense=pulp.LpMinimize)
 
 # Add variables
-x = pulp.LpVariable.dicts(indexs=x_keys, cat=pulp.LpContinuous, lowBound=0, name='x')
-z = pulp.LpVariable.dicts(indexs=z_keys, cat=pulp.LpBinary, name='z')
+x = pulp.LpVariable.dicts(indices=x_keys, cat=pulp.LpContinuous, lowBound=0, name='x')
+z = pulp.LpVariable.dicts(indices=z_keys, cat=pulp.LpBinary, name='z')
 
 # Add Constraints
 # Demand for Product i must be met:

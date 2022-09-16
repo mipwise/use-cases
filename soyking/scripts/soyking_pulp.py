@@ -5,7 +5,7 @@ mdl = pulp.LpProblem('SoyKing', sense=pulp.LpMinimize)
 
 # Add variables
 keys = [(1, 1), (2, 1), (3, 1), (1, 2), (2, 2), (3, 2)]
-x = pulp.LpVariable.dicts(indexs=keys, cat=pulp.LpContinuous, lowBound=0, name='x')
+x = pulp.LpVariable.dicts(indices=keys, cat=pulp.LpContinuous, lowBound=0, name='x')
 
 # Add Constraints
 mdl.addConstraint(x[1, 1] + x[1, 2] <= 16, name='s1')

@@ -4,7 +4,7 @@ import pulp
 mdl = pulp.LpProblem('Freshly', sense=pulp.LpMaximize)
 
 # Add variables
-x = pulp.LpVariable.dicts(indexs=[1, 2], cat=pulp.LpContinuous, lowBound=0, name='x')
+x = pulp.LpVariable.dicts(indices=[1, 2], cat=pulp.LpContinuous, lowBound=0, name='x')
 
 # Add Constraints
 mdl.addConstraint(54 * x[1] + 30 * x[2] <= 3*60*60, name='c1')
