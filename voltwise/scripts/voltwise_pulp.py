@@ -1,9 +1,9 @@
 import pulp
 
 # Input Data
-# retailers
+# tasks
 I = [1, 2, 3, 4, 5, 6]
-# Regular completion time
+# regular completion time
 r = {1: 23, 2: 20, 3: 27, 4: 9, 5: 19, 6: 21}
 # regular cost
 c = {1: 270, 2: 165, 3: 270, 4: 158, 5: 146, 6: 80}
@@ -14,7 +14,7 @@ eu = {1: 3, 2: 2, 3: 5, 4: 2, 5: 3, 6: 0}
 # predecessor-successor list
 p = [(1, 3), (2, 3), (3, 4), (4, 5), (4, 6)]
 # Maximum time to complete the project
-U = 70
+tu = 75
 
 # Define the model
 mdl = pulp.LpProblem('voltwise', sense=pulp.LpMinimize)
@@ -35,7 +35,7 @@ for i in I:
     mdl.addConstraint(r[i] - eu[i] <= y[i], name=f'c3_{i}')
 # C4) Maximum time to complete the project:
 for i in I:
-    mdl.addConstraint(x[i] + y[i] <= U, name=f'c4_{i}')
+    mdl.addConstraint(x[i] + y[i] <= tu, name=f'c4_{i}')
 
 # Set the objective function
 regular_cost = sum(c[i] * y[i] for i in I)
