@@ -18,7 +18,7 @@ pn = 20
 mdl = pulp.LpProblem('ukulelor', sense=pulp.LpMaximize)
 
 # Add variables
-x = pulp.LpVariable.dicts(indices=I, cat=pulp.LpInteger, name='x')
+x = pulp.LpVariable.dicts(indices=I, cat=pulp.LpInteger, name='x', lowBound=0)
 z = pulp.LpVariable.dicts(indices=I, cat=pulp.LpBinary, name='z')
 
 # Add Constraints
